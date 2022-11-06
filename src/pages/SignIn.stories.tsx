@@ -36,6 +36,6 @@ export const Default: StoryObj = {
 
         await waitFor(() => {
             return expect(canvas.getByText('Login realizado!')).toBeInTheDocument() 
-        })
+        }, {timeout: 350})
     }
 }
