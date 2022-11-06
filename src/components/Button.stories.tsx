@@ -7,6 +7,13 @@ export default {
     component: Button,
     args: {
         children: 'Create account'
+    },
+    argTypes: {
+        asChild: {
+            table: {
+                disable: true
+            }
+        }
     }
 } as Meta<ButtonProps>
 
@@ -21,7 +28,7 @@ export const Disable: StoryObj<ButtonProps> = {
 export const ButtonLoading: StoryObj<ButtonProps> = {
     args: {
         disable: true,
-        children: <Loading />
+        children: <Loading size='md' />
     },
     argTypes: {
         disable: {

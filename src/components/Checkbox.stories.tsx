@@ -7,12 +7,19 @@ export default {
     component: Checkbox,
     decorators: [
         Story => (
-            <div className='flex items-center gap-2'>
-                {Story()}
+            <label htmlFor='remember' className='flex items-center gap-2'>
+                {Story({ args: {id: 'remember'} })}
                 <Text size='sm'>Lembrar de mim por 30 dias</Text>
-            </div>
+            </label>
         )
-    ]
+    ],
+    argTypes: {
+        asChild: {
+            table: {
+                disable: true
+            }
+        }
+    }
 } as Meta<CheckboxProps>
 
 export const Default: StoryObj<CheckboxProps> = {}
