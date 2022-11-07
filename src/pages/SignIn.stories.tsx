@@ -30,12 +30,14 @@ export const Default: StoryObj = {
         userEvent.type(canvas.getByPlaceholderText('**********'), '12345678')
         userEvent.click(canvas.getByLabelText('Lembrar de mim por 30 dias'))
 
-        setTimeout(() => {
-            userEvent.click(canvas.getByRole('button'))
-        }, 300)
+        await waitFor(() => {
+            return expect(canvas.getByRole('button')).not.toBeDisabled()
+        })
+        
+        userEvent.click(canvas.getByRole('button'))
 
         await waitFor(() => {
-            return expect(canvas.getByText('Login realizado!')).toBeInTheDocument() 
-        }, {timeout: 350})
+            return expect(canvas.getByText('Login realizado!')).toBeInTheDocument()
+        })
     }
 }
