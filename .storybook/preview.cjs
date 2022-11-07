@@ -6,7 +6,7 @@ import '../src/styles/global.css';
 initialize({
   onUnhandledRequest: 'bypass',
   serviceWorker: {
-    url: './mockServiceWorker.js'
+    url: '/design-system-react/mockServiceWorker.js'
   }
 });
 
