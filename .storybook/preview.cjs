@@ -4,7 +4,10 @@ import { initialize, mswDecorator } from 'msw-storybook-addon';
 import '../src/styles/global.css';
 
 initialize({
-  onUnhandledRequest: 'bypass'
+  onUnhandledRequest: 'bypass',
+  serviceWorker: {
+    url: './mockServiceWorker.js'
+  }
 });
 
 export const decorators = [mswDecorator];
