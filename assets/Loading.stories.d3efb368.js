@@ -1,0 +1,2 @@
+import{L as o}from"./Loading.0cd8d4d7.js";import"./clsx.m.256e9345.js";import"./jsx-runtime.9eada07d.js";import"./index.4e538f0d.js";import"./iframe.34f285e5.js";const r={title:"Components/Loading",component:o,args:{size:"sm"},argTypes:{size:{options:["sm","md","lg"],control:{type:"inline-radio"}}}},a={},m=["Default"];export{a as Default,m as __namedExportsOrder,r as default};
+//# sourceMappingURL=Loading.stories.d3efb368.js.map
